@@ -1,0 +1,39 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 92f8baab3cc3004b1582f868a47582d81de07ea7783ca3cd85f5e572f065e4df
+
+name:           headlinecli
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/soerenberg/headline-cli#readme>
+homepage:       https://github.com/soerenberg/headline-cli#readme
+bug-reports:    https://github.com/soerenberg/headline-cli/issues
+author:         Sören Lennart Berg
+maintainer:     soeren.berg@protonmail.com
+copyright:      2021 Sören Lennart Berg
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/soerenberg/headline-cli
+
+executable headlinecli-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_headlinecli
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , process >=1.6.9 && <2
+    , scalpel >=0.6 && <1
+  default-language: Haskell2010
